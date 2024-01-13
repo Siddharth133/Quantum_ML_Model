@@ -105,7 +105,7 @@ resnet_model.compile(loss='sparse_categorical_crossentropy', optimizer=tf.optimi
 
 
 
-epochs=1
+epochs=10
 history = resnet_model.fit(
   training_data,
   validation_data=validation_data,
@@ -114,7 +114,7 @@ history = resnet_model.fit(
 
 
 class_names = training_data.class_names
-
+print(class_names)
 img = image.load_img('dataset/Sea Urchins/10032795986_14e543bbca_o.jpg', target_size=(227, 227))
 img_array = image.img_to_array(img)
 img_array = np.expand_dims(img_array, axis=0)

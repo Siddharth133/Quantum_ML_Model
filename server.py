@@ -6,11 +6,10 @@ import io
 
 app = Flask(__name__)
 
-# Load your trained model
+
 model = load_model('resnet_model')
 
-# Assuming you have a list of class names
-class_names = ['class1', 'class2', 'class3', ...] # Replace with your actual class names
+class_names = ['Clams', 'Corals', 'Crabs', 'Dolphin', 'Eel', 'Fish', 'Jelly Fish', 'Lobster', 'Nudibranchs', 'Octopus', 'Otter', 'Penguin', 'Puffers', 'Sea Rays', 'Sea Urchins', 'Seahorse', 'Seal', 'Sharks', 'Shrimp', 'Squid', 'Starfish', 'Turtle_Tortoise', 'Whale']
 
 @app.route('/')
 def home():
