@@ -1,13 +1,146 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Classification Page</title>
+    <link rel="stylesheet" href="style/mainstyle.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="shortcut icon" href="/Code_Red/resources/icons/vecteezy_mermaid-png-graphic-clipart-design_19806294.png" type="image/x-icon">
+</head>
+
 <body>
 
-<h2>Image Upload for Classification</h2>
-<form action="/predict" method="post" enctype="multipart/form-data">
-  Select image to upload:
-  <input type="file" name="file" id="file">
-  <input type="submit" value="Upload Image" name="submit">
-</form>
+    <header>
+        <div class="navbar">
+            <div class="logo-container">
+                   <!-- Replace 'your-logo.png' with the path to your logo image -->
+                   <img src="/Code_Red/resources/icons/vecteezy_starfish-animals-ocean_9347309.png" alt="Logo" class="logo">
+            </div>
+            <div class="project-name"><h3>DeepSeaDetective</h3></div>
+            <div class="menu-container">
+                <div class="dropdown">
+                    <button class="dropbtn" onclick="toggleDropdown()">☰</button>
+                    <div id="myDropdown" class="dropdown-content">
+                        <a href="#home">Home</a>
+                        <a href="#about">About</a>
+                        <a href="#services">Services</a>
+                        <!-- <button onclick="openPopup()"></button> -->
+
+                        <a href="">contact</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </header>
+
+    <section class="home">
+        <div class="video-class">
+            <video class="video-slide active" src="/Code_Red/resources/videos/vid-1.mp4" autoplay muted loop ></video>
+            <video class="video-slide" src="/Code_Red/resources/videos/vid-2.mp4" autoplay muted loop ></video>
+            <video class="video-slide" src="/Code_Red/resources/videos/vid-3.mp4" autoplay muted loop ></video>
+            <video class="video-slide" src="/Code_Red/resources/videos/vid-4.mp4" autoplay muted loop ></video>
+            <video class="video-slide" src="/Code_Red/resources/videos/vid-5.mp4" autoplay muted loop ></video>
+            <video class="video-slide" src="/Code_Red/resources/videos/vid-6.mp4" autoplay muted loop ></video>
+
+
+        </div>
+
+        <div id="upload-section">
+            <!-- <input type="file" id="image-upload" accept="image/*"> -->
+            <label class="filelabel">
+                <i class="fa-solid fa-paperclip"></i>
+                <span class="title">
+                    Add File
+                </span>
+                <input class="FileUpload1" id="FileInput" name="booking_attachment" type="file"/>
+            </label>
+
+<div class="button-container">
+        <button onclick="classifyImage()">Classify Image</button>
+    </div>
+
+        </div>
+
+    <!-- <section id="upload-section">
+        <input type="file" id="image-upload" accept="image/*">
+        <button onclick="classifyImage()">Classify Image</button>
+    </section> -->
+
+    <div class="class-sec invis" id="classification-section">
+        <h2>Image Classification: Turtle</h2>
+        <img id="imglol"
+            src="https://media.istockphoto.com/id/504241856/photo/green-turtle-approaching-water-surface.jpg?s=612x612&w=0&k=20&c=Y3oadGWN-W4mj3676Ra8lAoJcdI9zxrlKtWwq-jVmIc="
+            alt="Green Turtle">
+    </div>
+
+    <!-- <section id="classification-section">
+        <h2>Image Classification: Turtle</h2>
+        <img id="imglol"
+            src="https://media.istockphoto.com/id/504241856/photo/green-turtle-approaching-water-surface.jpg?s=612x612&w=0&k=20&c=Y3oadGWN-W4mj3676Ra8lAoJcdI9zxrlKtWwq-jVmIc="
+            alt="" srcset=""> -->
+        <!-- <p id="classification-result">Classification result will appear here.</p> -->
+    <!-- </section> -->
+    <div class="imginf-sect invis" id="image-info-section">
+        <div class="imginf-sect-text">
+            <h2>Image Identification:</h2>
+        </div>
+        <div class="right-section1">
+            <h4><span></span></h4>
+        </div>
+    </div>
+
+
+    <div class="iden-sec invis" id="identification-section">
+        <h2>Image Information:</h2>
+        <div class="right-section">
+            <div class="img-ident-about">
+                <p><span>About:</span></p>
+            </div>
+            <div class="img-ident-type">
+
+                <h4>Click Here: <span>...</span></h4>
+            </div>
+        </div>
+    </div>
+
+    <!-- <section id="identification-section">
+        <h2>Image Identification</h2> -->
+        <!-- <p id="classification-result">Identification result will appear here.</p> -->
+    <!-- </section> -->
+
+
+    <!-- <section id="image-info-section">
+        <h2>Image Information</h2>
+        <img id="image-preview" alt="Uploaded Image">
+    </section> -->
+
+    <!-- <section id="know-more-section">
+        <button type="button">
+            <p>Click Here To Know More</p>
+        </button>
+        <p>Additional information about the image.</p>
+    </section> -->
+
+    <div class="slider-navigation">
+        <div class="nav-btn active"></div>
+        <div class="nav-btn"></div>
+        <div class="nav-btn"></div>
+        <div class="nav-btn"></div>
+        <div class="nav-btn"></div>
+        <div class="nav-btn"></div>
+    </div>
+
+
+</section>
+
+
+    <script src="script/mainscript.js"></script>
+    <script src="script/popupcontact.js"></script>
 
 </body>
+
 </html>
